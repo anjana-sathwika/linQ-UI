@@ -25,7 +25,7 @@ function Profile() {
           <div className="size-16 rounded-full bg-gradient-to-br from-primary/70 to-primary/20 ring-2 ring-primary/40" />
           <div className="flex-1">
             <div className="flex items-center gap-2">
-              <p className="text-lg font-semibold">Aanya M.</p>
+              <p className="text-lg font-semibold">Anjana D.</p>
               <BadgeCheck className="size-4 text-primary" />
             </div>
             <p className="text-sm text-muted-foreground">4.9 ★ · 84 trips</p>

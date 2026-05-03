@@ -48,7 +48,7 @@ function Home() {
             <div>
               <p className="text-xs text-muted-foreground">Good evening</p>
               <p className="text-base font-semibold">
-                Aanya <span className="text-primary">✨</span>
+                Anjana <span className="text-primary">✨</span>
               </p>
             </div>
           </div>
