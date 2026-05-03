@@ -1,11 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from "react";
 import { BottomNav } from "@/components/bottom-nav";
 import { MessageCircle } from "lucide-react";
-
-export const Route = createFileRoute("/messages")({
-  head: () => ({ meta: [{ title: "Messages — together." }] }),
-  component: Messages,
-});
 
 function Messages() {
   const threads = [
@@ -48,3 +43,5 @@ function Messages() {
     </main>
   );
 }
+
+export default Messages;

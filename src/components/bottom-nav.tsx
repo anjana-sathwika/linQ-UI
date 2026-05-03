@@ -1,4 +1,4 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useLocation } from "react-router-dom";
 import { Home, Mail, Search, ClipboardList, User } from "lucide-react";
 
 const items = [
@@ -10,13 +10,13 @@ const items = [
 ] as const;
 
 export function BottomNav() {
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const location = useLocation();
 
   return (
     <nav className="fixed inset-x-0 bottom-4 z-50 mx-auto flex max-w-md justify-center px-5">
       <div className="flex w-full items-center justify-between rounded-full border border-border bg-card/90 px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-xl">
         {items.map(({ to, label, Icon }) => {
-          const active = to === "/" ? pathname === "/" : pathname.startsWith(to);
+          const active = to === "/" ? location.pathname === "/" : location.pathname.startsWith(to);
           return (
             <Link
               key={to}

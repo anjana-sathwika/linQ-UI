@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Bell,
@@ -15,26 +14,6 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { BottomNav } from "@/components/bottom-nav";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "together. — Share the way" },
-      {
-        name: "description",
-        content:
-          "together. matches verified riders going the same way at the same time. Instant, daily commute, and long distance carpools.",
-      },
-      { property: "og:title", content: "together. — Share the way" },
-      {
-        property: "og:description",
-        content:
-          "Verified ride-sharing for instant trips, daily commutes, and long distance journeys.",
-      },
-    ],
-  }),
-  component: Home,
-});
 
 type RideType = "instant" | "daily" | "long";
 
@@ -252,3 +231,5 @@ function Pill({ children }: { children: React.ReactNode }) {
     </span>
   );
 }
+
+export default Home;

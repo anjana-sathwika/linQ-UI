@@ -1,12 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from "react";
 import { BottomNav } from "@/components/bottom-nav";
 import { useTheme, type Theme } from "@/lib/theme";
 import { BadgeCheck, ChevronRight, Moon, Sun, Sparkles, Settings, CreditCard, Shield, LogOut, Leaf, Gem, Flower } from "lucide-react";
-
-export const Route = createFileRoute("/profile")({
-  head: () => ({ meta: [{ title: "Profile — together." }] }),
-  component: Profile,
-});
 
 const themes: { id: Theme; label: string; desc: string; Icon: typeof Sun; swatch: string }[] = [
   { id: "light", label: "Light", desc: "White & blue", Icon: Sun, swatch: "linear-gradient(135deg,#ffffff,#3b82f6)" },
@@ -91,3 +86,5 @@ function Profile() {
     </main>
   );
 }
+
+export default Profile;

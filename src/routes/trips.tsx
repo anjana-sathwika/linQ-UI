@@ -1,11 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from "react";
 import { BottomNav } from "@/components/bottom-nav";
 import { Calendar, MapPin } from "lucide-react";
-
-export const Route = createFileRoute("/trips")({
-  head: () => ({ meta: [{ title: "Trips — together." }] }),
-  component: Trips,
-});
 
 function Trips() {
   const trips = [
@@ -52,3 +47,5 @@ function Trips() {
     </main>
   );
 }
+
+export default Trips;

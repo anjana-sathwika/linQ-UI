@@ -1,11 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import React from "react";
 import { BottomNav } from "@/components/bottom-nav";
 import { Search as SearchIcon, MapPin } from "lucide-react";
-
-export const Route = createFileRoute("/search")({
-  head: () => ({ meta: [{ title: "Search — together." }] }),
-  component: SearchPage,
-});
 
 function SearchPage() {
   const recent = ["Office — BKC", "Airport T2", "Powai Lake", "Phoenix Mall"];
@@ -36,3 +31,5 @@ function SearchPage() {
     </main>
   );
 }
+
+export default SearchPage;
